@@ -4,7 +4,7 @@ import 'package:temp/src/generated/temp.pb.dart';
 
 Future<void> main(List<String> args) async {
   final channel = ClientChannel(
-    'localhost',
+    '192.168.88.86',
     port: 50051,
     options: ChannelOptions(
       credentials: ChannelCredentials.insecure(),
