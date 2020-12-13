@@ -1,0 +1,18 @@
+syntax="proto3";  
+
+option java_multiple_files = true;
+option java_package = "io.grpc.sirius-srv.cpu";
+option java_outer_classname = "CpuProto";
+option objc_class_prefix = "HLW";
+
+package cpu;
+
+service CPU {
+    rpc sayTemp(TempRequest) returns (TempResponse) {}
+}
+
+message TempRequest {}
+
+message TempResponse {
+    int32 count = 1;
+}
