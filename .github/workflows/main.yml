@@ -1,8 +1,7 @@
-name: main
+name: dart-cpu-temp
 on: [push]
 jobs:
   first-job:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/dart-cpu-temp@v1
       - run: echo "Hello!"
