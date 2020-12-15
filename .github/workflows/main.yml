@@ -6,8 +6,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Hello world action step
-        uses: ./ # Uses an action in the root directory
-        id: dart-cpu-temp
+      - name:
+        run: 'docker ps'
+      #- name: Hello world action step
+      #  uses: ./ # Uses an action in the root directory
+      #  id: dart-cpu-temp
       - name: Get the output time
         run: echo "The time was"

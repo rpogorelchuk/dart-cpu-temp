@@ -2,10 +2,8 @@ name: dart-cpu-temp
 inputs:
   detach:
     description: 'Run as daemond'
-    required: true
+    required: false
     default: '--detach'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.detach }}
