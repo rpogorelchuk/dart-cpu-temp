@@ -9,6 +9,6 @@ jobs:
       - name:
         run: docker build -t dart ./
       - name:
-        run: docker stop dart || true
+        run: docker stop dart
       - name:
         run: docker run --name=dart -d -p 50051:50051 dart
