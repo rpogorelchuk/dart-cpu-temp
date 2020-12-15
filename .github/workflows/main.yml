@@ -7,3 +7,6 @@ jobs:
       - run: echo "Hello!"
       - run: ls
       - run: mkdir hell2
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
