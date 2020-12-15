@@ -12,7 +12,7 @@ class CpuService extends CPUServiceBase {
     final file = File('/sys/class/thermal/thermal_zone0/temp');
     var contents = await file.readAsString();
 
-    return TempResponse()..count = int.parse(contents)+1000000;
+    return TempResponse()..count = int.parse(contents);
   }
 }
 
