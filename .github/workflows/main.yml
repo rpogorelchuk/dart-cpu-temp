@@ -6,5 +6,4 @@ jobs:
     steps:
       - run: echo "Hello!"
       - run: ls
-      - run: doker build -t dart ./
       - run: mkdir hell
