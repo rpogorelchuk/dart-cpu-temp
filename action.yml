@@ -1,4 +1,8 @@
 name: dart-cpu-temp
+inputs:
+  detach: '--detach'
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.detach }}
