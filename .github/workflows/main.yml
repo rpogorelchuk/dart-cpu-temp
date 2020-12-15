@@ -7,7 +7,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name:
-        run: 'docker ps'
+        run: docker ps
       #- name: Hello world action step
       #  uses: ./ # Uses an action in the root directory
       #  id: dart-cpu-temp
