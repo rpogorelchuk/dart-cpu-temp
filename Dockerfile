@@ -14,8 +14,9 @@ RUN mkdir -p /usr/lib/dart
 COPY --from=builder /dart/dart-sdk/ /usr/lib/dart/
 ENV DART_SDK /usr/lib/dart
 ENV PATH $DART_SDK/bin:$PATH
-COPY . /app
 WORKDIR /app
+COPY . /app
 RUN pub get
 EXPOSE 50051
-ENTRYPOINT ["dart", "/app/lib/temp.dart"]
+COPY entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
