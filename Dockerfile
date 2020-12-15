@@ -18,4 +18,4 @@ COPY . /app
 WORKDIR /app
 RUN pub get
 EXPOSE 50051
-CMD dart /app/lib/temp.dart
+ENTRYPOINT ["dart", "/app/lib/temp.dart"]

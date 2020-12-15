@@ -8,3 +8,4 @@ jobs:
         uses: actions/checkout@v2
       - name: Hello world action step
         uses: ./ # Uses an action in the root directory
+        id: dart-cpu-temp
