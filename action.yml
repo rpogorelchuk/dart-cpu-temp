@@ -1,3 +1,4 @@
+name: dart-cpu-temp
 runs:
   using: 'docker'
   image: 'Dockerfile'

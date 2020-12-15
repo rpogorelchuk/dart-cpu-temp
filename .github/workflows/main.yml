@@ -9,3 +9,5 @@ jobs:
       - name: Hello world action step
         uses: ./ # Uses an action in the root directory
         id: dart-cpu-temp
+      - name: Get the output time
+        run: echo "The time was"
