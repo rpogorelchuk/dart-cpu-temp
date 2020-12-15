@@ -4,9 +4,7 @@ jobs:
   first-job:
     runs-on: self-hosted
     steps:
-      - run: echo "Hello!"
-      - run: ls
-      - run: mkdir hell2
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Hello world action step
+        uses: ./ # Uses an action in the root directory
