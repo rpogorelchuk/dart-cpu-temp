@@ -1,5 +1,6 @@
 import 'package:grpc/grpc.dart';
 import 'package:temp/src/generated/temp.pbgrpc.dart';
+import 'package:temp/src/generated/temp.pb.dart';
 
 Future<void> main(List<String> args) async {
   final channel = ClientChannel(
@@ -11,7 +12,7 @@ Future<void> main(List<String> args) async {
   );
   final stub = CPUClient(channel);
   try {
-    final response = await stub.sayTemp({});
+    final response = await stub.sayTemp(TempRequest()..count = 1);
     print(response.count);
   } catch (e) {
     print('Caught error: $e');

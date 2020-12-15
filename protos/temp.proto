@@ -5,7 +5,9 @@ service CPU {
     rpc sayTemp(TempRequest) returns (TempResponse) {}
 }
 
-message TempRequest {}
+message TempRequest {
+    int32 count = 1;
+}
 
 message TempResponse {
     int32 count = 1;

@@ -11,6 +11,7 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 class TempRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TempRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'cpu'), createEmptyInstance: create)
+    ..a<$core.int>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'count', $pb.PbFieldType.O3)
     ..hasRequiredFields = false
   ;
 
@@ -36,6 +37,15 @@ class TempRequest extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static TempRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TempRequest>(create);
   static TempRequest _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.int get count => $_getIZ(0);
+  @$pb.TagNumber(1)
+  set count($core.int v) { $_setSignedInt32(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasCount() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearCount() => clearField(1);
 }
 
 class TempResponse extends $pb.GeneratedMessage {

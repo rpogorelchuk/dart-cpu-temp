@@ -8,7 +8,7 @@ import 'dart:io';
 
 class CpuService extends CPUServiceBase {
   @override
-  Future<TempResponse> sayTemp(ServiceCall call, request) async {
+  Future<TempResponse> sayTemp(ServiceCall call, TempRequest request) async {
     final file = File('/sys/class/thermal/thermal_zone0/temp');
     var contents = await file.readAsString();
 
